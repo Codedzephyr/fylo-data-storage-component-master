@@ -6,7 +6,7 @@ The designs were created to the following widths:
 
 - Mobile: 375px
 - Desktop: 1440px
-
+ bgGradient="linear(to-r, hsl(6, 100%, 80%) ,hsl(335, 100%, 65%))"
 ## Colors
 
 ### Primary

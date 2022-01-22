@@ -2,6 +2,7 @@ import React from "react";
 import BackgroundImage from "../images/bg-desktop.png";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Box, Flex } from "@chakra-ui/react";
+import { chakra } from "@chakra-ui/react";
 import { Center } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 
@@ -26,7 +27,7 @@ const Homepage = () => {
         bgSize="1600px"
         h="100vh"
       >
-        <Flex w="95%" maxW="1100px" gap="8">
+        <Flex w="95%" maxW="900px" gap="8">
           <Box
             flex="1"
             bgColor="hsl(228, 56%, 26%)"
@@ -102,11 +103,72 @@ const Homepage = () => {
               </Flex>
             </Box>
           </Box>
-          <Box flex="2" bgColor="hsl(228, 56%, 26%)" borderRadius="10px">
-            <Box>
-              <Text></Text>
-            </Box>
-          </Box>
+          <Flex flex="2" direction="column">
+            <Flex flex="1"></Flex>
+            <Flex flex = "4">
+              <Center w="100%" bgColor="hsl(228, 56%, 26%)" borderRadius="10px">
+                <Box w="95%" maxW="480px">
+                  <Text
+                    mt="0.5rem"
+                    color="hsl(243, 100%, 93%)"
+                    fontFamily="'Raleway',sans-seriff"
+                  >
+                    You’ve used
+                    <chakra.span fontWeight="700"> 815 GB </chakra.span> of your
+                    storage
+                  </Text>
+
+                  <Box
+                    mt="0.9rem"
+                    mb="0.8rem"
+                    h="2vh"
+                    borderRadius="10px"
+                    w="100%"
+                    bgColor="hsl(229, 57%, 11%)"
+                  >
+                    <Box
+                      h="2vh"
+                      w="80%"
+                      borderRadius="10px"
+                      bgGradient="linear(to-r, hsl(6, 100%, 80%) ,hsl(335, 100%, 65%))"
+                      position="relative"
+                    >
+                      <Box
+                        h="16px"
+                        w="15px"
+                        position="absolute"
+                        right="0px"
+                        bgColor="hsl(243, 100%, 93%)"
+                        borderRadius="50%"
+                      ></Box>
+                    </Box>
+                  </Box>
+                  {/* for gb title */}
+                  <Flex>
+                    {/* for left side */}
+                    <Box flex="1">
+                      <Text
+                        color="hsl(243, 100%, 93%)"
+                        fontFamily="'Raleway',sans-seriff"
+                        fontWeight="700"
+                      >
+                        0 GB
+                      </Text>
+                    </Box>
+                    <Flex flex="1" justifyContent="flex-end">
+                      <Text
+                        color="hsl(243, 100%, 93%)"
+                        fontFamily="'Raleway',sans-seriff"
+                        fontWeight="700"
+                      >
+                        1000 GB
+                      </Text>
+                    </Flex>
+                  </Flex>
+                </Box>
+              </Center>
+            </Flex>
+          </Flex>
         </Flex>
       </Center>
     </ChakraProvider>

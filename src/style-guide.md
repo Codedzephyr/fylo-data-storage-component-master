@@ -30,3 +30,5 @@ The designs were created to the following widths:
 
 - Family: [Raleway](https://fonts.google.com/specimen/Raleway)
 - Weights: 400, 700
+   bgPos="15% 120%"
+       bgSize="1600px"

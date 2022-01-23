@@ -1,5 +1,6 @@
 import React from "react";
 import BackgroundImage from "../images/bg-desktop.png";
+import BackgroundImageMobile from "../images/bg-mobile.png";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Box, Flex } from "@chakra-ui/react";
 import { chakra } from "@chakra-ui/react";
@@ -7,11 +8,12 @@ import { Center } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 
 const theme = extendTheme({
-  Neutral: {
-    Pale_Blue: "hsl(243, 100%, 93%)",
-    Grayish_Blue: " hsl(229, 7%, 55%)",
-    Very_Dark_Blue: "hsl(229, 57%, 11%)",
-    Dark_Blue: "hsl(228, 56%, 26%)",
+  breakpoints: {
+    xsml: "280px",
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
   },
 });
 
@@ -20,14 +22,49 @@ const Homepage = () => {
     <ChakraProvider theme={theme}>
       <Center
         w="100%"
-        bgImage={BackgroundImage}
-        bgPos="15% 120%"
+        bgImage={{
+          xsml: `${BackgroundImageMobile}`,
+          sm: `${BackgroundImageMobile}`,
+          md: `${BackgroundImageMobile}`,
+          lg: `${BackgroundImage}`,
+          xl: `${BackgroundImage}`,
+        }}
+        bgPos={{
+          xsml : "center",
+          sm: "center",
+          md: "center",
+          lg: "15% 120%",
+          xl: "15% 120%",
+        }}
         bgRepeat="no-repeat"
         bgColor="hsl(229, 57%, 11%)"
-        bgSize="1600px"
+        bgSize={{
+          xsml: "cover",
+          sm: "cover",
+          md: "cover",
+          lg: "1600px",
+          xl: "1600px",
+        }}
         h="100vh"
       >
-        <Flex w="95%" maxW="900px" gap="8">
+        <Flex
+          w={{
+            xsml: "90%",
+            sm : "90%",
+            md: "50%",
+            lg: "95%",
+            xl: "95%",
+          }}
+          maxW="900px"
+          gap="8"
+          direction={{
+            xsml: "column",
+            sm: "column",
+            md: "column",
+            lg: "row",
+            xl: "row",
+          }}
+        >
           <Box
             flex="1"
             bgColor="hsl(228, 56%, 26%)"
@@ -105,9 +142,15 @@ const Homepage = () => {
           </Box>
           <Flex flex="2" direction="column">
             <Flex flex="1"></Flex>
-            <Flex flex = "4">
+            <Flex flex="4">
               <Center w="100%" bgColor="hsl(228, 56%, 26%)" borderRadius="10px">
-                <Box w="95%" maxW="480px">
+                <Box w= {{
+                  sm: "75%",
+                  md: "75%",
+                  lg: "95%",
+                  xl: "95%",
+
+                }} maxW="480px">
                   <Text
                     mt="0.5rem"
                     color="hsl(243, 100%, 93%)"

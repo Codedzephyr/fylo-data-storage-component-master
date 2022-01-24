@@ -6,6 +6,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import { chakra } from "@chakra-ui/react";
 import { Center } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
+import { Tooltip } from "@chakra-ui/react";
 
 const theme = extendTheme({
   breakpoints: {
@@ -30,7 +31,7 @@ const Homepage = () => {
           xl: `${BackgroundImage}`,
         }}
         bgPos={{
-          xsml : "center",
+          xsml: "center",
           sm: "center",
           md: "center",
           lg: "15% 120%",
@@ -50,7 +51,7 @@ const Homepage = () => {
         <Flex
           w={{
             xsml: "90%",
-            sm : "90%",
+            sm: "90%",
             md: "50%",
             lg: "95%",
             xl: "95%",
@@ -73,7 +74,17 @@ const Homepage = () => {
             borderBottomRightRadius="5px"
             borderTopRightRadius="110px"
           >
-            <Box px="3em" pt="2.5em" pb="1em">
+            <Box
+              px={{
+                xsml: "1em",
+                sm: "3em",
+                md: "3em",
+                lg: "3em",
+                xl: "3em",
+              }}
+              pt="2.5em"
+              pb="1em"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="135" height="40">
                 <path
                   fill="#FFF"
@@ -144,22 +155,59 @@ const Homepage = () => {
             <Flex flex="1"></Flex>
             <Flex flex="4">
               <Center w="100%" bgColor="hsl(228, 56%, 26%)" borderRadius="10px">
-                <Box w= {{
-                  sm: "75%",
-                  md: "75%",
-                  lg: "95%",
-                  xl: "95%",
-
-                }} maxW="480px">
+                <Box
+                  w={{
+                    xsml: "80%",
+                    sm: "80%",
+                    md: "80%",
+                    lg: "95%",
+                    xl: "95%",
+                  }}
+                  maxW="480px"
+                >
                   <Text
-                    mt="0.5rem"
+                    mt={{
+                      xsml: "2.5rem",
+                      sm: "2.5rem",
+                      md: "1.5rem",
+                      lg: "0.5rem",
+                      xl: "0.5rem",
+                    }}
                     color="hsl(243, 100%, 93%)"
                     fontFamily="'Raleway',sans-seriff"
+                    fontSize="clamp(0.9rem , 3vw, 1.5rem)"
+                    textAlign={{
+                      xsml: "center",
+                      sm: "center",
+                      md: "initial",
+                      lg: "initial",
+                      xl: "initial",
+                    }}
                   >
                     You’ve used
                     <chakra.span fontWeight="700"> 815 GB </chakra.span> of your
                     storage
                   </Text>
+
+                  <Box
+                    position="relative"
+                    display="inline-block"
+                    borderBottom="1px dotted black"
+                  >
+                    <chakra.span
+                      w="120px"
+                      bgColor="black"
+                      color="#fff"
+                      textAlign="center"
+                      borderRadius="6px"
+                      px="0.5"
+                      py="0"
+                      position="absolute"
+                      zIndex="1"
+                    >
+                      185GB
+                    </chakra.span>
+                  </Box>
 
                   <Box
                     mt="0.9rem"
@@ -187,7 +235,15 @@ const Homepage = () => {
                     </Box>
                   </Box>
                   {/* for gb title */}
-                  <Flex>
+                  <Flex
+                    mb={{
+                      xsml: "2.5rem",
+                      sm: "2.5rem",
+                      md: "0rem",
+                      lg: "0rem",
+                      xl: "0rem",
+                    }}
+                  >
                     {/* for left side */}
                     <Box flex="1">
                       <Text

@@ -6,7 +6,6 @@ import { Box, Flex } from "@chakra-ui/react";
 import { chakra } from "@chakra-ui/react";
 import { Center } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
-import { Tooltip } from "@chakra-ui/react";
 
 const theme = extendTheme({
   breakpoints: {
@@ -175,7 +174,7 @@ const Homepage = () => {
                     }}
                     color="hsl(243, 100%, 93%)"
                     fontFamily="'Raleway',sans-seriff"
-                    fontSize="clamp(0.9rem , 3vw, 1.5rem)"
+                    fontSize="clamp(1.0rem , 3vw, 1.1rem)"
                     textAlign={{
                       xsml: "center",
                       sm: "center",
@@ -191,26 +190,81 @@ const Homepage = () => {
 
                   <Box
                     position="relative"
-                    display="inline-block"
+                    right="-254px"
+                    top="-162px"
                     borderBottom="1px dotted black"
+                    display={{
+                      xsml: "none",
+                      sm: "none",
+                      md: "none",
+                      lg: "inline-block",
+                      xl: "inline-block",
+                    }}
                   >
-                    <chakra.span
-                      w="120px"
-                      bgColor="black"
-                      color="#fff"
+                    <Flex
+                      w="250px"
+                      bgColor="hsl(243, 100%, 93%)"
+                      color="hsl(229, 57%, 11%)"
                       textAlign="center"
                       borderRadius="6px"
-                      px="0.5"
-                      py="0"
+                      px="1em"
+                      py="0.8em"
                       position="absolute"
                       zIndex="1"
+                      _after={{
+                        content: `""`,
+                        position: "absolute",
+                        top: "96%",
+                        left: "49%",
+                        ml: "62px",
+                        borderStyle: "solid",
+                        borderWidth: "20px",
+                        borderColor:
+                          "hsl(243, 100%, 93%) hsl(243, 100%, 93%) transparent transparent",
+                      }}
                     >
-                      185GB
-                    </chakra.span>
+                      <Box flex="1">
+                        <Text
+                          fontSize="3rem"
+                          fontFamily="'Raleway',sans-seriff"
+                          fontWeight="600"
+                        >
+                          18
+                          <chakra.span
+                            position="relative"
+                            top="-1px"
+                            fontSize="3rem"
+                            as="sub"
+                            mb="0.9rem"
+                          >
+                            5
+                          </chakra.span>
+                        </Text>
+                      </Box>
+                      <Flex
+                        flex="1"
+                        justifyContent="flex-start"
+                        alignItems="center"
+                      >
+                        <Text
+                          fontSize="1.5rem"
+                          fontWeight="600"
+                          color="hsl(229, 7%, 55%)"
+                        >
+                          GB Left
+                        </Text>
+                      </Flex>
+                    </Flex>
                   </Box>
 
                   <Box
-                    mt="0.9rem"
+                    mt={{
+                      xsml: "0.9rem",
+                      sm: "0.9rem",
+                      md: "0.9rem",
+                      lg: "-0.4rem",
+                      xl: "-0.4rem",
+                    }}
                     mb="0.8rem"
                     h="2vh"
                     borderRadius="10px"
@@ -239,8 +293,8 @@ const Homepage = () => {
                     mb={{
                       xsml: "2.5rem",
                       sm: "2.5rem",
-                      md: "0rem",
-                      lg: "0rem",
+                      md: "2.5rem",
+                      lg: "2.5rem",
                       xl: "0rem",
                     }}
                   >
@@ -267,7 +321,64 @@ const Homepage = () => {
                 </Box>
               </Center>
             </Flex>
+            <Center>
+              <Box
+                position="relative"
+                top="-24px"
+                w="60%"
+                borderBottom="1px dotted black"
+                display={{
+                  xsml: "block",
+                  sm: "block",
+                  md: "block",
+                  lg: "none",
+                  xl: "none",
+                }}
+              >
+                <Flex
+                  bgColor="hsl(243, 100%, 93%)"
+                  color="hsl(229, 57%, 11%)"
+                  textAlign="center"
+                  borderRadius="6px"
+                  px="1em"
+                  py="0.8em"
+                >
+                  <Box flex="1">
+                    <Text
+                      fontSize="3rem"
+                      fontFamily="'Raleway',sans-seriff"
+                      fontWeight="600"
+                    >
+                      18
+                      <chakra.span
+                        position="relative"
+                        top="-1px"
+                        fontSize="3rem"
+                        as="sub"
+                        mb="0.9rem"
+                      >
+                        5
+                      </chakra.span>
+                    </Text>
+                  </Box>
+                  <Flex
+                    flex="1"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                  >
+                    <Text
+                      fontSize="1.5rem"
+                      fontWeight="600"
+                      color="hsl(229, 7%, 55%)"
+                    >
+                      GB Left
+                    </Text>
+                  </Flex>
+                </Flex>
+              </Box>
+            </Center>
           </Flex>
+          {/* end of second container */}
         </Flex>
       </Center>
     </ChakraProvider>

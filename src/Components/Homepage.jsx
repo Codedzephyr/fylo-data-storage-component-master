@@ -49,8 +49,8 @@ const Homepage = () => {
       >
         <Flex
           w={{
-            xsml: "90%",
-            sm: "90%",
+            xsml: "80%",
+            sm: "80%",
             md: "50%",
             lg: "95%",
             xl: "95%",
@@ -279,8 +279,20 @@ const Homepage = () => {
                       position="relative"
                     >
                       <Box
-                        h="16px"
-                        w="15px"
+                        h={{
+                          xsml: "16px",
+                          sm: "16px",
+                          md: "25px",
+                          lg: "25px",
+                          xl: "16px",
+                        }}
+                        w={{
+                          xsml: "16px",
+                          sm: "16px",
+                          md: "25px",
+                          lg: "25px",
+                          xl: "16px",
+                        }}
                         position="absolute"
                         right="0px"
                         bgColor="hsl(243, 100%, 93%)"
@@ -345,9 +357,9 @@ const Homepage = () => {
                 >
                   <Box flex="1">
                     <Text
-                      fontSize="3rem"
+                      fontSize="clamp(2.5rem,5vw,3rem)"
                       fontFamily="'Raleway',sans-seriff"
-                      fontWeight="600"
+                      fontWeight="700"
                     >
                       18
                       <chakra.span
@@ -355,6 +367,7 @@ const Homepage = () => {
                         top="-1px"
                         fontSize="3rem"
                         as="sub"
+                        fontWeight="700"
                         mb="0.9rem"
                       >
                         5
@@ -367,11 +380,17 @@ const Homepage = () => {
                     alignItems="center"
                   >
                     <Text
-                      fontSize="1.5rem"
+                      ml={{
+                        xsml: "0.5rem",
+                        sm: "0.5rem",
+                        md: "0rem",
+                        lg: "0rem",
+                      }}
+                      fontSize="1.0rem"
                       fontWeight="600"
                       color="hsl(229, 7%, 55%)"
                     >
-                      GB Left
+                      GB LEFT
                     </Text>
                   </Flex>
                 </Flex>

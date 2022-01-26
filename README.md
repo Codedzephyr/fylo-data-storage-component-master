@@ -1,3 +1,69 @@
+# Frontend Mentor - Fylo data storage component solution
+
+This is a solution to the [Fylo data storage component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+
+### Screenshot
+
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: [GitHub Repository](https://github.com/Codedzephyr/fylo-data-storage-component-master)
+- Live Site URL: [Live Site URL](https://wonderful-albattani-faef66.netlify.app/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Chakra UI](https://chakra-ui.com/) - React framework
+
+### What I learned
+
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+
+To see how you can add code snippets, see below:
+
+```css
+  bgImage={{
+ xsml: `${BackgroundImageMobile}`,
+ sm: `${BackgroundImageMobile}`,
+ md: `${BackgroundImageMobile}`,
+lg: `${BackgroundImage}`,
+ xl: `${BackgroundImage}`,
+ }}
+```
+
+## Author
+
+- Website - [Salihu Andulhamid](https://infallible-pike-a0b433.netlify.app/)
+- Frontend Mentor - [@Codedzephyr](https://www.frontendmentor.io/profile/Codedzephyr)
+- Twitter - [@dimah](https://www.twitter.com/_Dimah__)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

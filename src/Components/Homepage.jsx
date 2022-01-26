@@ -4,6 +4,7 @@ import BackgroundImageMobile from "../images/bg-mobile.png";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Box, Flex } from "@chakra-ui/react";
 import { chakra } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 import { Center } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 
@@ -400,6 +401,22 @@ const Homepage = () => {
           {/* end of second container */}
         </Flex>
       </Center>
+      <Box>
+        <Text fontSize="11px" textAlign="center">
+          <Link
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            color="hsl(228, 45%, 44%)"
+          >
+            Frontend Mentor
+          </Link>
+          . Coded by
+          <Link color="hsl(228, 45%, 44%)" href="#">
+            Salihu Abdulhamid
+          </Link>
+          .
+        </Text>
+      </Box>
     </ChakraProvider>
   );
 };
